@@ -39,9 +39,13 @@ exit(0);}
 ## OUTPUT
 ```
 $ gcc -o filecopy.o filecopy.c
-$ ls -l filecopy.o
+$./filecopy.o
+$ ls -l file.out
 
 -rwxr-xr-x    1 root     root         18352 Apr 17 14:08 filecopy.o
+
+$ diff filecopy.c file.out
+
 
 
 ```
@@ -97,6 +101,8 @@ $ gcc -o lock.o lock.c
 $ ./lock.o tricky.txt
 
 opening tricky.txt
+
+
 
 ```
 ```

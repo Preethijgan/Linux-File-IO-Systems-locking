@@ -20,7 +20,7 @@ Execute the C Program for the desired output.
 # PROGRAM:
 
 ## 1.To Write a C program that illustrates files copying 
-
+```
 #include <unistd.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -35,16 +35,16 @@ out = open("file.out", O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
 while((nread = read(in,block,sizeof(block))) > 0)
 write(out,block,nread);
 exit(0);}
-
+```
 ## OUTPUT
-
+```
 $ gcc -o filecopy.o filecopy.c
 $ ls -l filecopy.o
 
 -rwxr-xr-x    1 root     root         18352 Apr 17 14:08 filecopy.o
 
 
-
+```
 
 
 
@@ -52,7 +52,7 @@ $ ls -l filecopy.o
 
 ## 2.To Write a C program that illustrates files locking
 
-
+```
 #include <fcntl.h>
 #include <stdio.h>
 #include <string.h>
@@ -90,20 +90,21 @@ getchar();
 close (fd);
 return 0;
 }
-
+```
 ## OUTPUT
-
+```
 $ gcc -o lock.o lock.c
 $ ./lock.o tricky.txt
 
 opening tricky.txt
 
-
+```
+```
 
 $ lslocks
 COMMAND         PID  TYPE SIZE MODE  M START END PATH
 (unknown)        54 FLOCK      WRITE 0     0   0 /run...
-
+```
 # RESULT:
 The programs are executed successfully.
 
